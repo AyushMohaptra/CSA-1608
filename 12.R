@@ -1,0 +1,12 @@
+data <- c(200, 300, 400, 600, 1000)
+print(data)
+min_val <- min(data)
+max_val <- max(data)
+min_max_normalized <- (data - min_val) / (max_val - min_val)
+print(min_max_normalized)
+z_score_base <- scale(data)
+print(as.vector(z_score_base))
+mean_val <- mean(data)
+pop_sd <- sqrt(sum((data - mean_val)^2) / length(data))
+z_score_pop <- (data - mean_val) / pop_sd
+print(z_score_pop)
